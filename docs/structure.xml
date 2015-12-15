@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="API Documentation" version="v2.8.5">
+  <partials/>
+  <file path="GitHookServiceProvider.php" generated-path="GitHookServiceProvider.html" hash="250917f79c7ebcdf7e4777e4a0414bff" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="ServiceProvider">\Sebwite\Support\ServiceProvider</namespace-alias>
+    <class final="false" abstract="false" namespace="Docit\GitHook" line="15" package="Docit\GitHook">
+      <extends>\Sebwite\Support\ServiceProvider</extends>
+      <name>GitHookServiceProvider</name>
+      <full_name>\Docit\GitHook\GitHookServiceProvider</full_name>
+      <docblock line="15">
+        <description>The main service provider</description>
+        <long-description></long-description>
+        <tag name="author" line="15" description="Sebwite"/>
+        <tag name="copyright" line="15" description="Copyright (c) 2015, Sebwite"/>
+        <tag name="license" line="15" description="MIT" link="https://tldrlegal.com/license/mit-license"/>
+        <tag name="package" line="15" description="Docit\GitHook"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Docit\GitHook" line="17" package="Docit\GitHook">
+        <name>$dir</name>
+        <full_name>\Docit\GitHook\GitHookServiceProvider::dir</full_name>
+        <default>__DIR__</default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Docit\GitHook" line="19" package="Docit\GitHook">
+        <name>$configFiles</name>
+        <full_name>\Docit\GitHook\GitHookServiceProvider::configFiles</full_name>
+        <default>array('docit.git-hook')</default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Docit\GitHook" line="21" package="Docit\GitHook">
+        <name>$providers</name>
+        <full_name>\Docit\GitHook\GitHookServiceProvider::providers</full_name>
+        <default>array(\Docit\GitHook\Providers\ConsoleServiceProvider::class)</default>
+        <docblock line="21">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Docit\GitHook" line="27" package="Docit\GitHook">
+        <name>boot</name>
+        <full_name>\Docit\GitHook\GitHookServiceProvider::boot()</full_name>
+        <docblock line="27">
+          <description>{@inheritdoc}</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Docit\GitHook" line="35" package="Docit\GitHook">
+        <name>register</name>
+        <full_name>\Docit\GitHook\GitHookServiceProvider::register()</full_name>
+        <docblock line="35">
+          <description>{@inheritdoc}</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="17" code="PPC:ERR-50007">No summary for property $dir</error>
+      <error line="19" code="PPC:ERR-50007">No summary for property $configFiles</error>
+      <error line="21" code="PPC:ERR-50007">No summary for property $providers</error>
+    </parse_markers>
+    <source>eJydUUFOwzAQvPsVe0BqG0EDSFwCiEqtgB6QEO2NoMh1tonVxLbsTQFV/TtOmhRaDkj4Ymt3ZmdmfXNncsOY4iU6wwXCRAtJ8YOkR61X14xVDmGGi3dJGM8qY7SleIZ2LQU+W72WKVqPCoOABTDPEUouFbgdAEyLYHV3xCvKtYX2tEPrhtDm08osJ4Dx/tkXA7g8v7g6/Yks/FTlHTUnJzIuCkMqUltgxouh0GXYQsJS0lkHf5rOa7YPuOJZyz4IyoKQiYI7B23hKCLgB6FKHRzV2YbVs3xOQkGYwkkqLdxCkkymL0niN3PUFlotZXYvC3Qe9gq9tLYxzLzZ3Mv24O03p9tiw2Dd/uKDAHHnyMVjrZwu8MhpFDX5GrrXqK/605pRAWxGUuVoJXk727YY7nxUC79FWFZKkNQKFlpTf9C0NnsvJ9wYb85wi4qiaIfZiWzZ/7UsZtIR2r/0vnGd5pZ9AZ+N4Cc=</source>
+  </file>
+  <file path="Providers/ConsoleServiceProvider.php" generated-path="Providers.ConsoleServiceProvider.html" hash="4b73e9d4a50effc0032598a6ff145d63" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="BaseConsoleProvider">\Sebwite\Support\ConsoleServiceProvider</namespace-alias>
+    <class final="false" abstract="false" namespace="Docit\GitHook\Providers" line="15" package="Docit\GitHook">
+      <extends>\Sebwite\Support\ConsoleServiceProvider</extends>
+      <name>ConsoleServiceProvider</name>
+      <full_name>\Docit\GitHook\Providers\ConsoleServiceProvider</full_name>
+      <docblock line="15">
+        <description>This is the ConsoleServiceProvider.</description>
+        <long-description></long-description>
+        <tag name="author" line="15" description="Sebwite"/>
+        <tag name="copyright" line="15" description="Copyright (c) 2015, Sebwite"/>
+        <tag name="license" line="15" description="MIT" link="https://tldrlegal.com/license/mit-license"/>
+        <tag name="package" line="15" description="Docit\GitHook"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Docit\GitHook\Providers" line="20" package="Docit\GitHook">
+        <name>$namespace</name>
+        <full_name>\Docit\GitHook\Providers\ConsoleServiceProvider::namespace</full_name>
+        <default>'Docit\\GitHook\\Console'</default>
+        <docblock line="20">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="20" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Docit\GitHook\Providers" line="25" package="Docit\GitHook">
+        <name>$prefix</name>
+        <full_name>\Docit\GitHook\Providers\ConsoleServiceProvider::prefix</full_name>
+        <default>'docit.git-hook.commands.'</default>
+        <docblock line="25">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="25" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Docit\GitHook\Providers" line="30" package="Docit\GitHook">
+        <name>$commands</name>
+        <full_name>\Docit\GitHook\Providers\ConsoleServiceProvider::commands</full_name>
+        <default>array('test' =&gt; 'GitHookTest')</default>
+        <docblock line="30">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="30" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="20" code="PPC:ERR-50007">No summary for property $namespace</error>
+      <error line="25" code="PPC:ERR-50007">No summary for property $prefix</error>
+      <error line="30" code="PPC:ERR-50007">No summary for property $commands</error>
+    </parse_markers>
+    <source>eJydkU1LxDAQhu/5FXMQqkUbFby4rooK6kEQdm/WQ0zHJmzbhGR23UX87yY19QO2F0Mgw+SdJ5l3zi6ssox1okVvhUS4MVJTeavpzphF+ejMSlfo/ISxpUeY4cubJixnS2uNo/LadN40OEO30hIHNQgPV8Jjuh3SgcHznOUwV9pD2KQQthMKFnWXYknKOEgrPR4vpLEbp2tFEABDuCv34Pjw6GT/t7IJ1C78vF+KyPpTzqmpXIO1aAppWp4kvNV0MMgf7uexOliyEHWq/mMNyzmTjfB+pAPANWFXbTWCvbPIi2b04PDQSoQ2PTnd1SnH+9M6QygJK9j5mdEUsq+/fM9pGEQWPP4H2jp81evIrSK3qIMTKnCjPa0IXRSjYOGc2Ixxh/JAfmLDGDNCT1kIpueQpQbmMdUrnifsg30CbAPMrg==</source>
+  </file>
+  <file path="Console/GitHookTestCommand.php" generated-path="Console.GitHookTestCommand.html" hash="efb6caf9b98f37bda5b5849a6df287df" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Command">\Sebwite\Support\Command</namespace-alias>
+    <class final="false" abstract="false" namespace="Docit\GitHook\Console" line="7" package="Default">
+      <extends>\Sebwite\Support\Command</extends>
+      <name>GitHookTestCommand</name>
+      <full_name>\Docit\GitHook\Console\GitHookTestCommand</full_name>
+      <docblock line="7">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="7" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Docit\GitHook\Console" line="14" package="Default">
+        <name>$signature</name>
+        <full_name>\Docit\GitHook\Console\GitHookTestCommand::signature</full_name>
+        <default>'git-hook:test'</default>
+        <docblock line="14">
+          <description>The name and signature of the console command.</description>
+          <long-description></long-description>
+          <tag name="var" line="14" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Docit\GitHook\Console" line="21" package="Default">
+        <name>$description</name>
+        <full_name>\Docit\GitHook\Console\GitHookTestCommand::description</full_name>
+        <default>'git-hook test command'</default>
+        <docblock line="21">
+          <description>The console command description.</description>
+          <long-description></long-description>
+          <tag name="var" line="21" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Docit\GitHook\Console" line="28" package="Default">
+        <name>handle</name>
+        <full_name>\Docit\GitHook\Console\GitHookTestCommand::handle()</full_name>
+        <docblock line="28">
+          <description>Execute the console command.</description>
+          <long-description></long-description>
+          <tag name="return" line="28" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="7" code="PPC:ERR-50005">No summary for class \Docit\GitHook\Console\GitHookTestCommand</error>
+    </parse_markers>
+    <source>eJydkU9PwzAMxe/5FD5M6lZp7M74JwGC+3bsJUu91qJNotiBSmjfnTTrxEA7IHyxkpeX90t8c+9br5TVPbLXBuHJGZLqheTVubfq0Vl2Ha6Vioywwd0HCVab6L0LktS+17ZOquk0M0yuLbJMEuAgaGuGaa0+FaRalWXuUMK2RRjTYTzN1FgtMSC4PUhSzDE/9Wy/mlwn88O7DgAsgWwz7a1y98EJGsEaZt933kLRkCzbhHgtibFI4BdofmVCjWwCeSFn/5N/Zj8ngJHglHGB5HlAEwX/9AsB0/ssQE8D1j854q4jA/toTQZok73D+SKLx1mMNZOWeHnXkcV5MY6vWKyzeFAH9QVJI6ED</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="Docit" full_name="Docit">
+    <package name="GitHook" full_name="Docit\GitHook"/>
+  </package>
+  <package name="global" full_name="global"/>
+  <namespace name="Docit" full_name="Docit">
+    <namespace name="GitHook" full_name="Docit\GitHook">
+      <namespace name="Console" full_name="Docit\GitHook\Console"/>
+      <namespace name="Providers" full_name="Docit\GitHook\Providers"/>
+    </namespace>
+  </namespace>
+  <deprecated count="0"/>
+</project>
