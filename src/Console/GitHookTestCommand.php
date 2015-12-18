@@ -1,7 +1,9 @@
 <?php
 
-namespace Docit\GitHook\Console;
+namespace Docit\Hooks\Git\Console;
 
+use Docit\Hooks\Git\Sync\Syncer;
+use Guzzle\Http\Message\Request;
 use Sebwite\Support\Command;
 
 class GitHookTestCommand extends Command
@@ -11,7 +13,7 @@ class GitHookTestCommand extends Command
      *
      * @var  string
      */
-    protected $signature = 'git-hook:test';
+    protected $signature = 'docit:git:test';
 
     /**
      * The console command description.
@@ -27,6 +29,10 @@ class GitHookTestCommand extends Command
      */
     public function handle()
     {
+        $project = app('docit')->getProject('sebwite-platform');
+        $s = $project->gitSyncer();
+        $s->syncAll();
+
         $this->line('Test');
     }
 }

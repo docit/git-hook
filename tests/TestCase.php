@@ -11,6 +11,6 @@ abstract class TestCase extends AbstractTestCase
      */
     protected function getServiceProviderClass($app)
     {
-        return \Docit\GitHook\GitHookServiceProvider::class;
+        return \Docit\Hooks\Git\HookServiceProvider::class;
     }
 }
