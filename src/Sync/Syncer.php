@@ -104,6 +104,7 @@ class Syncer implements SyncerContract
 
     public function syncRef($ref, $type)
     {
+        $this->project->getFactory()->log('info', 'docit.hooks.git.syncer.sync.start', compact('ref', 'type'));
         $this->runHook('git:syncer:start', [ $this, $ref, $type ]);
         $owner     = $this->setting('owner');
         $repo      = $this->setting('repository');
@@ -145,6 +146,7 @@ class Syncer implements SyncerContract
             $this->cache->forever(md5($this->project->getName() . $branch[ 'name' ]), $branch[ 'sha' ]);
         }
         $this->runHook('git:syncer:done', [ $this, $ref, $type ]);
+        $this->project->getFactory()->log('info', 'docit.hooks.git.syncer.sync.end', compact('ref', 'type'));
     }
 
     public function getBranchesToSync()
@@ -187,7 +189,7 @@ class Syncer implements SyncerContract
         foreach ($tags as $tag => $sha) {
             try {
                 $version = new version($tag);
-            }             catch (SemVerException $e) {
+            } catch (SemVerException $e) {
                 continue;
             }
             if ($version->satisfies($allowedVersionRange) === false or in_array($version->getVersion(), $currentVersions, true)) {

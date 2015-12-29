@@ -57,7 +57,7 @@
     </parse_markers>
     <source>eJx9U1FP2zAQfs+vuIdKSVHbbEh7WUc3VNhg6lAneKMIua6TGBw7si9D1db/vrPrtGUwTpET333+7u7z5dPnpmqS/OgogSOYM4tgCsBKwJQVhZCaoVjB/GIODeOPrBRuRECP/XF5AzPJhXYCmF4BN83ayrJCkLowtmYojYZlq1eKGJ4kVkQrXcdDqJBmdjk9v7o+h0IqQbR5kmhWC0coAWeGS1xcGPPoFt/o63qt+ThJWteFpsYKWjRaxtEtvtJq7HocEJdKtXWo/wDxsxWtWHw3S6KJPd/4oujxxQRWn4WyVe1ybs2D4Nh1/KUrPdq+hhBlLVbGdsFn+p2JX3AjWB1we6G2uN024304fvf+w+DwbDiios7RKsTGfcxzVCurRMnUiJs6j6C8ljjsDhxcUhCXK+Yc+A5jb1NT13R7ye/EEzfWIDmp4t7KN0cqeXdQylvQwLIaFm/p/+cwGn2RcEcjNQqrmYLI9+ptzUxZSl36N/Roiafzba3tkrqEotU8TNr9PTfaoW05Zs+T9gN+26G3np/D4STE4GTXqg9tkle5C2lFRlMDvQezHNAJhuwt1uFEmTJLmRIW0wGkwTmq/CCPSvpydAGjJk4X314B4W53ZN5SynVF/0IadieTkHw4KQV6b9YfvECfIoq6QZfu0Sy6XsBj9j257+n2wH+3w9/14xx4kwVk/1LDBI77B1IEOQJmJZRAqnW8i23+Ixi1FUcye1lKn+LbH1PYjDZev1OlOt5Nskn+Al1jc9U=</source>
   </file>
-  <file path="Sync/Syncer.php" generated-path="Sync.Syncer.html" hash="dfbf349d01599527d012663136d229ab" package="Default">
+  <file path="Sync/Syncer.php" generated-path="Sync.Syncer.html" hash="a14403c52a6a1eb64ba04e470cf1e1d1" package="Default">
     <docblock line="0">
       <description>Part of the Robin Radic's PHP packages.</description>
       <long-description>MIT License and copyright information bundled with this package
@@ -224,26 +224,26 @@ in the LICENSE file or visit http://radic.mit-license.com</long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Docit\Hooks\Git\Sync" line="150" package="Docit\Hooks">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Docit\Hooks\Git\Sync" line="152" package="Docit\Hooks">
         <name>getBranchesToSync</name>
         <full_name>\Docit\Hooks\Git\Sync\Syncer::getBranchesToSync()</full_name>
-        <docblock line="150">
+        <docblock line="152">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Docit\Hooks\Git\Sync" line="179" package="Docit\Hooks">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Docit\Hooks\Git\Sync" line="181" package="Docit\Hooks">
         <name>getVersionsToSync</name>
         <full_name>\Docit\Hooks\Git\Sync\Syncer::getVersionsToSync()</full_name>
-        <docblock line="179">
+        <docblock line="181">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Docit\Hooks\Git\Sync" line="202" package="Docit\Hooks">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Docit\Hooks\Git\Sync" line="204" package="Docit\Hooks">
         <name>extractDocumentsFromMenu</name>
         <full_name>\Docit\Hooks\Git\Sync\Syncer::extractDocumentsFromMenu()</full_name>
-        <docblock line="202">
+        <docblock line="204">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -258,10 +258,10 @@ in the LICENSE file or visit http://radic.mit-license.com</long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Docit\Hooks\Git\Sync" line="227" package="Docit\Hooks">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Docit\Hooks\Git\Sync" line="229" package="Docit\Hooks">
         <name>setting</name>
         <full_name>\Docit\Hooks\Git\Sync\Syncer::setting()</full_name>
-        <docblock line="227">
+        <docblock line="229">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -276,16 +276,16 @@ in the LICENSE file or visit http://radic.mit-license.com</long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Docit\Hooks\Git\Sync" line="238" package="Docit\Hooks">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Docit\Hooks\Git\Sync" line="240" package="Docit\Hooks">
         <name>client</name>
         <full_name>\Docit\Hooks\Git\Sync\Syncer::client()</full_name>
-        <docblock line="238">
+        <docblock line="240">
           <description>client method</description>
           <long-description></long-description>
-          <tag name="param" line="238" description="" type="null" variable="$remote">
+          <tag name="param" line="240" description="" type="null" variable="$remote">
             <type>null</type>
           </tag>
-          <tag name="return" line="238" description="" type="\Sebwite\Git\Remotes\Remote">
+          <tag name="return" line="240" description="" type="\Sebwite\Git\Remotes\Remote">
             <type>\Sebwite\Git\Remotes\Remote</type>
           </tag>
         </docblock>
@@ -295,10 +295,10 @@ in the LICENSE file or visit http://radic.mit-license.com</long-description>
           <type>null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Docit\Hooks\Git\Sync" line="248" package="Docit\Hooks">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Docit\Hooks\Git\Sync" line="250" package="Docit\Hooks">
         <name>ensureDirectory</name>
         <full_name>\Docit\Hooks\Git\Sync\Syncer::ensureDirectory()</full_name>
-        <docblock line="248">
+        <docblock line="250">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -322,23 +322,23 @@ in the LICENSE file or visit http://radic.mit-license.com</long-description>
       <error line="105" code="PPC:ERR-50015">Argument $ref is missing from the Docblock of syncRef</error>
       <error line="105" code="PPC:ERR-50015">Argument $type is missing from the Docblock of syncRef</error>
       <error line="105" code="PPC:ERR-50008">No summary for method syncRef()</error>
-      <error line="150" code="PPC:ERR-50008">No summary for method getBranchesToSync()</error>
-      <error line="179" code="PPC:ERR-50008">No summary for method getVersionsToSync()</error>
-      <error line="202" code="PPC:ERR-50015">Argument $menuArray is missing from the Docblock of extractDocumentsFromMenu</error>
-      <error line="202" code="PPC:ERR-50015">Argument $documents is missing from the Docblock of extractDocumentsFromMenu</error>
-      <error line="202" code="PPC:ERR-50008">No summary for method extractDocumentsFromMenu()</error>
-      <error line="227" code="PPC:ERR-50015">Argument $key is missing from the Docblock of setting</error>
-      <error line="227" code="PPC:ERR-50015">Argument $default is missing from the Docblock of setting</error>
-      <error line="227" code="PPC:ERR-50008">No summary for method setting()</error>
-      <error line="248" code="PPC:ERR-50015">Argument $path is missing from the Docblock of ensureDirectory</error>
-      <error line="248" code="PPC:ERR-50008">No summary for method ensureDirectory()</error>
+      <error line="152" code="PPC:ERR-50008">No summary for method getBranchesToSync()</error>
+      <error line="181" code="PPC:ERR-50008">No summary for method getVersionsToSync()</error>
+      <error line="204" code="PPC:ERR-50015">Argument $menuArray is missing from the Docblock of extractDocumentsFromMenu</error>
+      <error line="204" code="PPC:ERR-50015">Argument $documents is missing from the Docblock of extractDocumentsFromMenu</error>
+      <error line="204" code="PPC:ERR-50008">No summary for method extractDocumentsFromMenu()</error>
+      <error line="229" code="PPC:ERR-50015">Argument $key is missing from the Docblock of setting</error>
+      <error line="229" code="PPC:ERR-50015">Argument $default is missing from the Docblock of setting</error>
+      <error line="229" code="PPC:ERR-50008">No summary for method setting()</error>
+      <error line="250" code="PPC:ERR-50015">Argument $path is missing from the Docblock of ensureDirectory</error>
+      <error line="250" code="PPC:ERR-50008">No summary for method ensureDirectory()</error>
       <error line="35" code="PPC:ERR-50007">No summary for property $files</error>
       <error line="40" code="PPC:ERR-50007">No summary for property $remote</error>
       <error line="45" code="PPC:ERR-50007">No summary for property $git</error>
       <error line="50" code="PPC:ERR-50007">No summary for property $project</error>
       <error line="55" code="PPC:ERR-50007">No summary for property $cache</error>
     </parse_markers>
-    <source>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</source>
+    <source>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</source>
   </file>
   <file path="Factory.php" generated-path="Factory.html" hash="721ab382d912872a73c951c9a5a39277" package="Default">
     <docblock line="0">
@@ -694,7 +694,7 @@ in the LICENSE file or visit http://radic.mit-license.com</long-description>
     </parse_markers>
     <source>eJyzsS/IKODKS8xNLS5ITE5VcMlPziyJ8cjPzy6OcQeynPPzSooSk0uKrbm4MvNKUovSQKqCK/OSU4u4qrlquQAMKBcl</source>
   </file>
-  <file path="Http/Controllers/WebhookController.php" generated-path="Http.Controllers.WebhookController.html" hash="feb2f17cf57d75f9bd47428f685e7d97" package="Default">
+  <file path="Http/Controllers/WebhookController.php" generated-path="Http.Controllers.WebhookController.html" hash="3ff8de52b01bd7dc35fb373b67f133ab" package="Default">
     <docblock line="0">
       <description>Part of the Caffeinated PHP packages.</description>
       <long-description>MIT License and copyright information bundled with this package in the LICENSE file</long-description>
@@ -774,23 +774,23 @@ in the LICENSE file or visit http://radic.mit-license.com</long-description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Docit\Hooks\Git\Http\Controllers" line="80" package="Docit\Hooks">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Docit\Hooks\Git\Http\Controllers" line="81" package="Docit\Hooks">
         <name>github</name>
         <full_name>\Docit\Hooks\Git\Http\Controllers\WebhookController::github()</full_name>
-        <docblock line="80">
+        <docblock line="81">
           <description>webhook</description>
           <long-description></long-description>
-          <tag name="param" line="80" description="" type="" variable="$type"/>
-          <tag name="return" line="80" description="" type="\Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response">
+          <tag name="param" line="81" description="" type="" variable="$type"/>
+          <tag name="return" line="81" description="" type="\Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response">
             <type>\Illuminate\Contracts\Routing\ResponseFactory</type>
             <type>\Symfony\Component\HttpFoundation\Response</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Docit\Hooks\Git\Http\Controllers" line="102" package="Docit\Hooks">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Docit\Hooks\Git\Http\Controllers" line="105" package="Docit\Hooks">
         <name>applyToGitProjects</name>
         <full_name>\Docit\Hooks\Git\Http\Controllers\WebhookController::applyToGitProjects()</full_name>
-        <docblock line="102">
+        <docblock line="105">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -808,13 +808,13 @@ in the LICENSE file or visit http://radic.mit-license.com</long-description>
     </class>
     <parse_markers>
       <error line="48" code="PPC:ERR-50008">No summary for method bitbucket()</error>
-      <error line="102" code="PPC:ERR-50015">Argument $remote is missing from the Docblock of applyToGitProjects</error>
-      <error line="102" code="PPC:ERR-50015">Argument $closure is missing from the Docblock of applyToGitProjects</error>
-      <error line="102" code="PPC:ERR-50008">No summary for method applyToGitProjects()</error>
+      <error line="105" code="PPC:ERR-50015">Argument $remote is missing from the Docblock of applyToGitProjects</error>
+      <error line="105" code="PPC:ERR-50015">Argument $closure is missing from the Docblock of applyToGitProjects</error>
+      <error line="105" code="PPC:ERR-50008">No summary for method applyToGitProjects()</error>
       <error line="28" code="PPC:ERR-50007">No summary for property $docit</error>
       <error line="33" code="PPC:ERR-50007">No summary for property $factory</error>
     </parse_markers>
-    <source>eJylV1tv2zYUfvevYAOjkgJLdtP1JZm9S9quGbohSALsIQ4MWqItLrSokVRSL8l/7yGpCyXZSbAJhmWJ5/5955D+8ac8zQfjw8MBOkTnWCjEV0ilBJ3i1YrQDCuSoPMv5yjH8S1eExmBoJb94+wKfaUxySRBOEtQzPOtoOtUIZqtuNhgRXmGlkWWMLBwT1UKZqms7ICUcfP17PTTn5ef0IoyAmbHgwxviAQhgj7ymKr5F85v5fw3/UupfH7KMyU4Y0TIk8GgkJXYKRfELuJYyfln+OZii7C06yeOaGOxJ++KXRZ5zoWa/yKEfX3GWLExFbGhXECcHNLvrV7wQtFs7cQKoZYlvtI1gI/OHUJIi2UjVZX256pG5eWEbZZxoVIuqtUWUh/JHboieGPkGkisXP3oxwE6mrz7MHJ1jQorES2vFPKUx+OxYolgZI1ZFPPNuBQab6gKKwWHDgbGmGEp0V9kmULYTYqIfFMkSyRqXg0eBtqVqY++IIo7LNDcwbVEp1wfm3suuCKxznmYWISfM/MM5o89kRfcrSqudB32s42BH0oUWj4qperocizwppVmn742td0qvXgtZFV47eiLJQCFVkUWm7ZcLOrIfGOt9DRCtefSTGD0H2yuxr7u4nBmxOFxWpe/I1Dqa4G6YHr5abAzoiVVyyK+Jcrve0wJTqDfwRT04vExz9jWF+SfgkiQDmflcjjDjPnBCF3XmvryvoWlbFgUNPFG3VVyRzIV3pJtdwm6WoTQhpnqK2mcrb165SZwapBghZEpDxYCbxcJV27IJtLgxMnxDjOaoGnLT5X4dSsWdHONJugGTadT5P1alS0sySfHR9HEQ2/f7rPkJtwyJUjOj/NCpj1tKiXgYnK6tnKSakAjPas9k3gtT1fIf1OmE6CHlh1BVCEyuNm56XtnmU1bR/cvF9IboQ+TiVPHp8ZwqVyyC+c5215xYP+54H9DY0rfqykEZmpe+QHS09lG7wa0K7L9KTohBS0eO+1/bxHY3edDtc1J/a70N3c2jab5q+2j2l/qOXW53ax4tgXRDSwAiGYf+sxhjzW7ba3xbO+vza5Tt1mXIkDZTgMlhNE7IoAuwOcZ6nWeD5yyRsNaNOh0jOGcZx9esGFFuwbcBthtwJHoKku6hhoXApDc6127buSCpq3/R1e/zFmbc4uww9yuusQd1fDspfAwxTKFyPRtkW5w7Hsyxe+0aThaLdZE6ZkPmy+4PYAzH+zqNMsLdQATs3IZzkBkRdcmroUm8wI6X5NRRnKbxVFJcXgbQ25eK1l96e53Zo1TdztkDnRIUxPqQXc6OAWDnUlxxu8BmR0tuSoYWzSjx9V/QoRB0fYa3jF6IBSo0Q+T911T+zq+OQnUmO1AdijIBuRGaH7KuIQSoGFsf/T2NzgtExynUDlnaw1ngFhtLdAH2YYYD/2i9xAkGV5q3EsgNQ8w1CYwOJif6PHxVciXoEfWYrLD0i4oNdloVpBuVduktV7tw/Q10XgdmCqVC+DH6yxE/D4jwgtQhLyxB9+v0Wno53U5P9SS4DqG9l/oIbTQvFiYCeFXoMOppPbT3jBrBI0ZCqcynMUE/oRVw/yZPjE6zxa4ttxqId2Ob6bTVvH+O4at8x4UEdisyCWMi9/5splm3aq1uM44VF3/bwRyeeZdZA4zESBR808X2NOF9GxvmY2g7LN+TXsdD6pHncOF/X4afAeYt2+I</source>
+    <source>eJy1V1lv4zYQfvev4AbGSgos25t2X5LaPbK73RTbIkgC9CEOBFqiLTa0qJJUsm6S/94hqYOS7CToIQTWwZlvjm9myHz3fZ7mg8nh4QAdonMsFOIrpFKCTvFqRWiGFUnQ+edzlOP4Fq+JHIOglv317Ap9oTHJJEE4S1DM862g61Qhmq242GBFeYaWRZYwQLinKgVYKisckDJmvpydfvzt8iNaUUYAdjLI8IZIECLoA4+pWnzm/FYuftZPSuWLU54pwRkjQp4MBoWsxE65IHYRx0ouPsEvF1uEpV0/cUQbxJ68K3ZZ5DkXavGjEPbzGWPFxmTEunIBfnIIv7d6wQtFs7XjK7hapvhK5wD+dOzgQlosG6kqtT9UOSovx22zjAuVclGttpj6QO7QFcEbI9dQYuXqVz8O0NH03fuRq2tUWMloeaUQpzyeTBRLBCNrzMYx30xKocmGqrBScMrB0BgzLCX6nSxTcLsJEZGvimSJRM2nwcNAmzL50Rd4cYcFWji8luyU6xNzzwVXJNYxDxPL8HMwz3D+2BN5wdyqqpWuwX60MdSHEoWWH5dStXc5FnjTCrNfvja03So9fy1llXtt74slEIVWRRabtoyi2jPfoJWWRqi2XMIERv/BxmrwdReHcyMOr7M6/R2BUl8L1AnTy0+DnR4tqVoW8S1RfmVxl8Fwzvja9/SE8UbIM9/GOudyvIane0vAOMaMwfo18gTZAG8ems2RV5vw0E1w4kSUEpzAPAFXodePj3nGtr4gfxZEgjfhvFwO54DqBwBba+rL+xqWsmFR0MQbdVfJHclUeEu23SWYGiKENs9UX0mHYfHqFe1z7XKCFUYm/VgIvI0SrlyXjaetGO8wowmatexUgV+3fEE312iKbtBsNkPeT1XOwrK45eRoPPXQ27f7kNyAW1CC5Pw4L2Ta06ZSAu8mpmsrJ6kumLHeCzpk0RXy35ThBE6V6EsQVYgMbnYu+95ZZsPW3v3FhYSaeD+dOnl8aoBL5bLacJ6z7RWH7joX/A9ofOk79TNq6tYPkJ7+1vvAbRQXdG9ojitBqz+csVJW9e75MVTbnNTfSnsLZzNqhkq1LVX7Vj3/LrebFc+2ILqBBSDP7G+fOOzdZhevNZ6dKWuzm/1/7Wvx9/dupy0TwugdEVCESKv3+tmHSrWQYS0adPrQVLJnX17AsKJdALetdgM4El1lSdfAYCEg/r3WtelGLmiGxb+YFS93QkmF2wbD3K667TCq6ek1xjDFMgWP9C1KNzj2PZnidxoSDoLRmii9Q8FRAcwdwAkVziA0ywt1APO3MhXOQWRF18afSFdOBHNEl7gcy20WV/UEX2OIyWsFqS89S5zJ5eTbjqwD7dLMuHrQnTVOomAfVZzxe2BkR6OvCsaiZpC5+k+IMEjWXuAdgwxcgRx9O/2mC7VvjjTnlpqrHYwObaON0OKUcQkpQMPYPvT2fzjbExynkLlWYwNjNVqgj91NQTz0k95jkGR4qXkvidR1gCE3geHBPKLHx1cxXw0Ri5jsQNpFpS42mhWkm9V20Vqr9mX2Gm+8Dk2VygXUx+sQxvw+I8IL0Bh5Ew9+X6PTlJ/XrfmhlgTTesZGevhEui4iMxn8inQ9eys77XlbM2hgKJwhcRYT+Jex2iKe6ROj82yCa+RWC+l2fDObtZL3zzlsnU4hiVDNilzCuPiFL5sp1s3af7SJlX3Wz2mv40H1qHNUsb9Pg78BzS2n/g==</source>
   </file>
   <file path="Http/Middleware/VerifyCsrfToken.php" generated-path="Http.Middleware.VerifyCsrfToken.html" hash="159087aded005efe3bcb89af665207c9" package="Default">
     <docblock line="0">

@@ -47,6 +47,7 @@ class WebhookController extends Controller
 
     public function bitbucket()
     {
+        $this->docit->log('info', 'docit.hooks.git.webhook.call', [ 'remote' => 'bitbucket' ]);
 
         $headers = Arr::only(request()->headers->all(), [
             'x-request-uuid',
@@ -66,7 +67,7 @@ class WebhookController extends Controller
         }
 
         return $this->applyToGitProjects('bitbucket', function () use ($data) {
-        
+
             return $data[ 'repository.name' ];
         });
     }
@@ -79,6 +80,8 @@ class WebhookController extends Controller
      */
     public function github()
     {
+        $this->docit->log('info', 'docit.hooks.git.webhook.call', [ 'remote' => 'github' ]);
+
         $headers = [
             'delivery'   => request()->header('x-github-delivery'),
             'event'      => request()->header('x-github-event'),
@@ -88,7 +91,7 @@ class WebhookController extends Controller
         $data    = array_dot(request()->all());
 
         return $this->applyToGitProjects('github', function ($project) use ($data, $headers) {
-        
+
             $hash = hash_hmac('sha1', file_get_contents("php://input"), $project->config('git_hook_settings.sync.webhook_secret'));
 
             if ($headers[ 'signature' ] === "sha1=$hash") {
