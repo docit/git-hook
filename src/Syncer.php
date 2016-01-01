@@ -5,14 +5,14 @@
  * MIT License and copyright information bundled with this package
  * in the LICENSE file or visit http://radic.mit-license.com
  */
-namespace Docit\Hooks\Git\Sync;
+namespace Codex\Hooks\Git;
 
-use Docit\Core\Project;
-use Docit\Core\Traits\Hookable;
-use Docit\Hooks\Git\Contracts\Syncer as SyncerContract;
-use Docit\Support\Path;
+use Codex\Core\Project;
+use Codex\Core\Traits\Hookable;
+use Codex\Hooks\Git\Contracts\Syncer as SyncerContract;
 use Illuminate\Contracts\Cache\Repository as Cache;
 use Sebwite\Git\Contracts\Manager;
+use Sebwite\Support\Path;
 use Symfony\Component\Yaml\Yaml;
 use vierbergenlars\SemVer\expression;
 use vierbergenlars\SemVer\SemVerException;
@@ -21,9 +21,9 @@ use vierbergenlars\SemVer\version;
 /**
  * This is the class Syncer.
  *
- * @package        Docit\Hooks
- * @author         Docit
- * @copyright      Copyright (c) 2015, Docit. All rights reserved
+ * @package        Codex\Hooks
+ * @author         Codex
+ * @copyright      Copyright (c) 2015, Codex. All rights reserved
  */
 class Syncer implements SyncerContract
 {
@@ -45,7 +45,7 @@ class Syncer implements SyncerContract
     protected $git;
 
     /**
-     * @var \Docit\Core\Project
+     * @var \Codex\Core\Project
      */
     protected $project;
 
@@ -104,7 +104,7 @@ class Syncer implements SyncerContract
 
     public function syncRef($ref, $type)
     {
-        $this->project->getFactory()->log('info', 'docit.hooks.git.syncer.sync.start', compact('ref', 'type'));
+        $this->project->getFactory()->log('info', 'codex.hooks.git.syncer.sync.start', compact('ref', 'type'));
         $this->runHook('git:syncer:start', [ $this, $ref, $type ]);
         $owner     = $this->setting('owner');
         $repo      = $this->setting('repository');
@@ -146,7 +146,7 @@ class Syncer implements SyncerContract
             $this->cache->forever(md5($this->project->getName() . $branch[ 'name' ]), $branch[ 'sha' ]);
         }
         $this->runHook('git:syncer:done', [ $this, $ref, $type ]);
-        $this->project->getFactory()->log('info', 'docit.hooks.git.syncer.sync.end', compact('ref', 'type'));
+        $this->project->getFactory()->log('info', 'codex.hooks.git.syncer.sync.end', compact('ref', 'type'));
     }
 
     public function getBranchesToSync()
@@ -241,7 +241,7 @@ class Syncer implements SyncerContract
     {
         $remote = isset($remote) ? $remote : $this->remote;
         $c      = [
-            'credentials' => config('docit.hooks.git.credentials.' . $remote)
+            'credentials' => config('codex.hooks.git.credentials.' . $remote)
         ];
 
         return $this->git->connection($remote);

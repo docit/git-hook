@@ -4,18 +4,18 @@
  *
  * MIT License and copyright information bundled with this package in the LICENSE file
  */
-namespace Docit\Hooks\Git\Http\Controllers;
+namespace Codex\Hooks\Git\Http\Controllers;
 
-use Docit\Core\Contracts\Factory as Docit;
-use Docit\Hooks\Git\Contracts\Factory;
-use Docit\Support\Arr;
+use Codex\Core\Contracts\Factory as Codex;
+use Codex\Hooks\Git\Contracts\Factory;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
+use Sebwite\Support\Arr;
 
 /**
  * This is the GithubController.
  *
- * @package        Docit\Hooks
+ * @package        Codex\Hooks
  * @author         Caffeinated Dev Team
  * @copyright      Copyright (c) 2015, Caffeinated
  * @license        https://tldrlegal.com/license/mit-license MIT License
@@ -23,31 +23,31 @@ use Illuminate\Routing\Controller;
 class WebhookController extends Controller
 {
     /**
-     * @var \Docit\Core\Factory
+     * @var \Codex\Core\Factory
      */
-    protected $docit;
+    protected $codex;
 
     /**
-     * @var \Docit\Hooks\Git\Contracts\Factory|\Docit\Hooks\Git\Factory
+     * @var \Codex\Hooks\Git\Contracts\Factory|\Codex\Hooks\Git\Factory
      */
     protected $factory;
 
     /**
      * WebhookController constructor.
      *
-     * @param \Docit\Core\Contracts\Factory $docit
-     * @param \Docit\Hooks\Git\Factory      $factory
+     * @param \Codex\Core\Contracts\Factory $codex
+     * @param \Codex\Hooks\Git\Factory      $factory
      */
-    public function __construct(Docit $docit, Factory $factory)
+    public function __construct(Codex $codex, Factory $factory)
     {
 
-        $this->docit   = $docit;
+        $this->codex   = $codex;
         $this->factory = $factory;
     }
 
     public function bitbucket()
     {
-        $this->docit->log('info', 'docit.hooks.git.webhook.call', [ 'remote' => 'bitbucket' ]);
+        $this->codex->log('info', 'codex.hooks.git.webhook.call', [ 'remote' => 'bitbucket' ]);
 
         $headers = Arr::only(request()->headers->all(), [
             'x-request-uuid',
@@ -80,7 +80,7 @@ class WebhookController extends Controller
      */
     public function github()
     {
-        $this->docit->log('info', 'docit.hooks.git.webhook.call', [ 'remote' => 'github' ]);
+        $this->codex->log('info', 'codex.hooks.git.webhook.call', [ 'remote' => 'github' ]);
 
         $headers = [
             'delivery'   => request()->header('x-github-delivery'),
@@ -105,7 +105,7 @@ class WebhookController extends Controller
     protected function applyToGitProjects($remote, \Closure $closure)
     {
 
-        foreach ($this->docit->getProjects() as $project) {
+        foreach ($this->codex->getProjects() as $project) {
             if ($project->config('enable_git_hook', false) === false || $project->config('git_hook_settings.webhook.enabled', false) === false) {
                 continue;
             }
@@ -125,7 +125,7 @@ class WebhookController extends Controller
 
             $this->factory->createSyncJob($project);
 
-            $this->docit->log('info', 'docit.hooks.git.webhook.call', [ 'remote' => $remote ]);
+            $this->codex->log('info', 'codex.hooks.git.webhook.call', [ 'remote' => $remote ]);
 
             return response('', 200);
         }

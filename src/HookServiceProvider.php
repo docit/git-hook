@@ -1,8 +1,10 @@
 <?php
 
-namespace Docit\Hooks\Git;
+namespace Codex\Hooks\Git;
 
-use Docit\Core\Traits\DocitProviderTrait;
+use Codex\Core\Traits\ProvidesCodex;
+use Codex\Hooks\Git\Hook\FactoryHook;
+use Codex\Hooks\Git\Hook\ProjectHook;
 use Sebwite\Support\ServiceProvider;
 
 /**
@@ -11,15 +13,15 @@ use Sebwite\Support\ServiceProvider;
  * @author        Sebwite
  * @copyright     Copyright (c) 2015, Sebwite
  * @license       https://tldrlegal.com/license/mit-license MIT
- * @package       Docit\GitHook
+ * @package       Codex\GitHook
  */
 class HookServiceProvider extends ServiceProvider
 {
-    use DocitProviderTrait;
+    use ProvidesCodex;
 
     protected $dir = __DIR__;
 
-    protected $configFiles = [ 'docit.hooks.git' ];
+    protected $configFiles = [ 'codex.hooks.git' ];
 
     protected $providers = [
         Providers\ConsoleServiceProvider::class,
@@ -28,13 +30,13 @@ class HookServiceProvider extends ServiceProvider
     ];
 
     protected $singletons = [
-        'docit.hooks.git'        => Factory::class,
-        'docit.hooks.git.syncer' => Sync\Syncer::class
+        'codex.hooks.git'        => Factory::class,
+        'codex.hooks.git.syncer' => \Codex\Hooks\Git\Syncer::class
     ];
 
     protected $aliases = [
-        'docit.hooks.git'        => Contracts\Factory::class,
-        'docit.hooks.git.syncer' => Contracts\Syncer::class
+        'codex.hooks.git'        => Contracts\Factory::class,
+        'codex.hooks.git.syncer' => Contracts\Syncer::class
     ];
 
     /**
@@ -54,10 +56,10 @@ class HookServiceProvider extends ServiceProvider
 
         $this->addRouteProjectNameExclusions('git-hook-webhook');
 
-        // Add the hook which merges the docit config.
-        $this->addDocitHook('factory:ready', FactoryHook::class);
+        // Add the hook which merges the codex config.
+        $this->addCodexHook('factory:ready', FactoryHook::class);
 
         // And add the hook providing the  `gith` method for projects to retreive a gitsync instance for that specific project
-        $this->addDocitHook('project:ready', ProjectHook::class);
+        $this->addCodexHook('project:ready', ProjectHook::class);
     }
 }

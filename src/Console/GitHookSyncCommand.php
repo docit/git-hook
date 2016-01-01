@@ -5,17 +5,17 @@
  * MIT License and copyright information bundled with this package
  * in the LICENSE file or visit http://radic.mit-license.org
  */
-namespace Docit\Hooks\Git\Console;
+namespace Codex\Hooks\Git\Console;
 
-use Docit\Core\Contracts\Factory;
-use Docit\Support\Command;
+use Codex\Core\Contracts\Factory;
 use Illuminate\Contracts\Queue\Queue;
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use Sebwite\Support\Command;
 
 /**
  * This is the CoreListCommand class.
  *
- * @package                   Docit\Core
+ * @package                   Codex\Core
  * @version                   1.0.0
  * @author                    Robin Radic
  * @license                   MIT License
@@ -26,11 +26,11 @@ class GitHookSyncCommand extends Command
 {
     use DispatchesJobs;
 
-    protected $signature = 'docit:git:sync';
+    protected $signature = 'codex:git:sync {--queue : Put the sync job on the queue}';
 
     protected $description = 'Synchronise all Github projects.';
 
-    /** @var \Docit\Core\Factory */
+    /** @var \Codex\Core\Factory */
     protected $factory;
 
     protected $queue;
@@ -53,10 +53,14 @@ class GitHookSyncCommand extends Command
                 $choices[]  = $project->getName();
             }
         }
-        $project = $this->choice('Pick the github enabled project you wish to sync', $choices);
+        $project = $this->choice('Pick the git enabled project you wish to sync', $choices);
 
-
-        app('docit.hooks.git')->createSyncJob($project);
-        $this->comment('Created sync job and pushed it onto the queue.');
+        if ($this->option('queue')) {
+            app('codex.hooks.git')->createSyncJob($project);
+            $this->comment('Created sync job and pushed it onto the queue.');
+        } else {
+            $this->comment('Starting synchronisation. This might take a while.');
+            app('codex.hooks.git')->gitSyncer($this->factory->getProject($project))->syncAll();
+        }
     }
 }

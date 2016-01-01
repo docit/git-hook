@@ -4,15 +4,15 @@
  *
  * MIT License and copyright information bundled with this package in the LICENSE file
  */
-namespace Docit\Hooks\Git;
+namespace Codex\Hooks\Git\Hook;
 
-use Docit\Core\Contracts\Hook;
-use Docit\Core\Project;
+use Codex\Core\Contracts\Hook;
+use Codex\Core\Project;
 
 /**
  * This is the Hook.
  *
- * @package        Docit\Core
+ * @package        Codex\Core
  * @author         Caffeinated Dev Team
  * @copyright      Copyright (c) 2015, Caffeinated
  * @license        https://tldrlegal.com/license/mit-license MIT License
@@ -24,16 +24,16 @@ class ProjectHook implements Hook
     /**
      * handle
      *
-     * @param \Docit\Core\Project $project
+     * @param \Codex\Core\Project $project
      */
     public function handle(Project $project)
     {
         $that = $this;
         // Add a method on the project class that creates a new GitSync for that specific project
         Project::macro('gitSyncer', function () {
-        
+
             /** @var Project $this */
-            return app('docit.hooks.git')->gitSyncer($this);
+            return app('codex.hooks.git')->gitSyncer($this);
         });
 
 

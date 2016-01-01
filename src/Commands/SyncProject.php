@@ -5,35 +5,34 @@
  * MIT License and copyright information bundled with this package in the LICENSE file
  */
 
-namespace Docit\Hooks\Git\Sync;
+namespace Codex\Hooks\Git\Commands;
 
-use Docit\Core\Contracts\Factory;
+use Codex\Core\Contracts\Factory;
 use Illuminate\Contracts\Queue\Job;
 
 /**
- * This is the DocitSyncGithubProject.
+ * This is the CodexSyncGithubProject.
  *
- * @package        Docit\Core
+ * @package        Codex\Core
  * @author         Caffeinated Dev Team
  * @copyright      Copyright (c) 2015, Caffeinated
  * @license        https://tldrlegal.com/license/mit-license MIT License
  */
-class SyncProjectCommand
+class SyncProject
 {
-    protected $docit;
+    protected $codex;
 
     /**
-     * @param \Docit\Core\Contracts\Factory|\Docit\Core\Factory $docit
-     * @internal param \Illuminate\Contracts\Logging\Log $Log
+     * @param \Codex\Core\Contracts\Factory|\Codex\Core\Factory $codex
      */
-    public function __construct(Factory $docit)
+    public function __construct(Factory $codex)
     {
-        $this->docit = $docit;
+        $this->codex = $codex;
     }
 
     public function fire(Job $job, $data)
     {
-        $this->docit->log('alert', 'docit.hooks.git.sync.project.command', [
+        $this->codex->log('alert', 'codex.hooks.git.sync.project.command', [
             'jobName'     => $job->getName(),
             'jobAttempts' => $job->attempts(),
             'project'     => $data[ 'project' ]
@@ -42,6 +41,6 @@ class SyncProjectCommand
         if ($job->attempts() > 2) {
             $job->delete();
         }
-        $this->docit->getProject($data[ 'project' ])->gitSyncer()->syncAll();
+        $this->codex->getProject($data[ 'project' ])->gitSyncer()->syncAll();
     }
 }

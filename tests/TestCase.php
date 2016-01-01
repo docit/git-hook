@@ -1,6 +1,6 @@
 <?php
 
-namespace Docit\Tests\GitHook;
+namespace Codex\Tests\GitHook;
 
 use Sebwite\Testbench\AbstractTestCase;
 
@@ -11,6 +11,6 @@ abstract class TestCase extends AbstractTestCase
      */
     protected function getServiceProviderClass($app)
     {
-        return \Docit\Hooks\Git\HookServiceProvider::class;
+        return \Codex\Hooks\Git\HookServiceProvider::class;
     }
 }

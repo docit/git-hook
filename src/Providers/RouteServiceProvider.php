@@ -1,9 +1,9 @@
 <?php
 
-namespace Docit\Hooks\Git\Providers;
+namespace Codex\Hooks\Git\Providers;
 
-use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Routing\Router;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Docit\Hooks\Git\Http\Controllers';
+    protected $namespace = 'Codex\Hooks\Git\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -37,7 +37,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map(Router $router)
     {
-        $router->group(['prefix' => config('docit.base_route'), 'namespace' => $this->namespace], function ($router) {
+        $router->group(['prefix' => config('codex.base_route'), 'namespace' => $this->namespace], function ($router) {
             require __DIR__ . '/../Http/routes.php';
         });
     }

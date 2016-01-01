@@ -8,6 +8,6 @@ author: Sebwite
 Begin by installing the package through Composer.
 
 ```bash
-composer require docit/git-hook
+composer require codex/git-hook
 ```
 

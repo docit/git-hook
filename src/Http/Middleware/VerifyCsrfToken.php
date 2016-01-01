@@ -1,6 +1,6 @@
 <?php
 
-namespace Docit\Hooks\Git\Http\Middleware;
+namespace Codex\Hooks\Git\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Encryption\Encrypter;
@@ -25,9 +25,9 @@ class VerifyCsrfToken extends BaseVerifier
     ];
 
     protected $excludedRouteNames = [
-        'docit.hooks.git.webhook.github',
+        'codex.hooks.git.webhook.github',
 
-        'docit.hooks.git.webhook.bitbucket'
+        'codex.hooks.git.webhook.bitbucket'
     ];
 
     /**

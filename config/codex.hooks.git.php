@@ -31,7 +31,7 @@ return [
             ],
             'webhook'     => [
                 'enabled' => false,
-                'secret'  => env('DOCIT_PROJECT_GITHUB_WEBHOOK_SECRET', null),
+                'secret'  => env('CODEX_PROJECT_GITHUB_WEBHOOK_SECRET', null),
             ],
         ]
     ]

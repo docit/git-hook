@@ -1,5 +1,5 @@
 <?php
-namespace Docit\Tests\GitHook;
+namespace Codex\Tests\GitHook;
 
 use Sebwite\Testbench\Traits\ServiceProviderTester;
 

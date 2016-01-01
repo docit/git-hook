@@ -1,5 +1,5 @@
 <?php
-namespace Docit\Hooks\Git\Contracts;
+namespace Codex\Hooks\Git\Contracts;
 
 interface Factory
 {

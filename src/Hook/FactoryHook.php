@@ -4,17 +4,17 @@
  *
  * MIT License and copyright information bundled with this package in the LICENSE file
  */
-namespace Docit\Hooks\Git;
+namespace Codex\Hooks\Git\Hook;
 
-use Docit\Core\Contracts\Hook;
-use Docit\Core\Factory as DocitFactory;
+use Codex\Core\Contracts\Hook;
+use Codex\Core\Factory as CodexFactory;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Filesystem\Filesystem;
 
 /**
  * This is the Hook.
  *
- * @package        Docit\Core
+ * @package        Codex\Core
  * @author         Caffeinated Dev Team
  * @copyright      Copyright (c) 2015, Caffeinated
  * @license        https://tldrlegal.com/license/mit-license MIT License
@@ -42,12 +42,12 @@ class FactoryHook implements Hook
         $this->config = $config;
     }
 
-    public function handle(DocitFactory $docit)
+    public function handle(CodexFactory $codex)
     {
-        $docit->setConfig(
+        $codex->setConfig(
             array_replace_recursive(
-                $docit->config(),
-                $this->config->get('docit.hooks.git.default_project_config')
+                $codex->config(),
+                $this->config->get('codex.hooks.git.default_project_config')
             )
         );
     }

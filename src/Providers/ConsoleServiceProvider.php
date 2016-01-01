@@ -1,6 +1,6 @@
 <?php
 
-namespace Docit\Hooks\Git\Providers;
+namespace Codex\Hooks\Git\Providers;
 
 use Sebwite\Support\ConsoleServiceProvider as BaseConsoleProvider;
 
@@ -10,25 +10,24 @@ use Sebwite\Support\ConsoleServiceProvider as BaseConsoleProvider;
 * @author        Sebwite
 * @copyright  Copyright (c) 2015, Sebwite
 * @license      https://tldrlegal.com/license/mit-license MIT
-* @package      Docit\GitHook
+* @package      Codex\GitHook
 */
 class ConsoleServiceProvider extends BaseConsoleProvider
 {
     /**
      * @var  string
      */
-    protected $namespace = 'Docit\\Hooks\\Git\\Console';
+    protected $namespace = 'Codex\\Hooks\\Git\\Console';
 
     /**
      * @var  string
      */
-    protected $prefix = 'docit.hooks.git.commands.';
+    protected $prefix = 'codex.hooks.git.commands.';
 
     /**
      * @var  array
      */
     protected $commands = [
-        'test'   => 'GitHookTest',
         'sync'   => 'GitHookSync'
     ];
 }

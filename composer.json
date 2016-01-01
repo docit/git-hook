@@ -1,26 +1,17 @@
 {
-    "name": "docit/git-hook",
+    "name"       : "codex/git-hook",
     "description": "",
-    "repositories": [{"type": "composer", "url": "http://packages.sebwite.nl"}],
-    "authors": [
-        {
-            "name": "Sebwite",
-            "email": "info@sebwite.nl",
-            "homepage": "https://sebwite.nl"
-        }
-    ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
-        "php": ">=5.5.9",
-        "sebwite/support": "1.0.*"
+    "require"    : {
+        "php"            : ">=5.5.9",
+        "sebwite/support": "~1.0",
+        "sebwite/git"    : "1.0.*"
     },
-    "autoload": {
+    "autoload"   : {
         "psr-4": {
-            "Docit\\Hooks\\Git\\": "src/"
+            "Codex\\Hooks\\Git\\": "src/"
         }
     },
-    "extra": {
+    "extra"      : {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
         }

@@ -1,17 +1,16 @@
 <?php
 /**
- * Part of the Docit PHP packages.
+ * Part of the Codex PHP packages.
  *
  * License and copyright information bundled with this package in the LICENSE file
  */
-namespace Docit\Hooks\Git;
+namespace Codex\Hooks\Git;
 
-use Docit\Core\Contracts\Factory as Docit;
-use Docit\Core\Project;
-use Docit\Core\Traits\Hookable;
-use Docit\Hooks\Git\Contracts\Factory as FactoryContract;
-use Docit\Hooks\Git\Sync\Syncer;
-use Docit\Hooks\Git\Sync\SyncProjectCommand;
+use Codex\Core\Contracts\Factory as Codex;
+use Codex\Core\Project;
+use Codex\Core\Traits\Hookable;
+use Codex\Hooks\Git\Commands\SyncProject;
+use Codex\Hooks\Git\Contracts\Factory as FactoryContract;
 use Illuminate\Contracts\Cache\Repository as Cache;
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Contracts\Queue\Queue;
@@ -20,9 +19,9 @@ use Sebwite\Git\Contracts\Manager;
 /**
  * This is the class Factory.
  *
- * @package        Docit\Hooks
- * @author         Docit
- * @copyright      Copyright (c) 2015, Docit. All rights reserved
+ * @package        Codex\Hooks
+ * @author         Codex
+ * @copyright      Copyright (c) 2015, Codex. All rights reserved
  */
 class Factory implements FactoryContract
 {
@@ -33,9 +32,9 @@ class Factory implements FactoryContract
     protected $files;
 
     /**
-     * @var \Docit\Core\Contracts\Factory
+     * @var \Codex\Core\Contracts\Factory
      */
-    protected $docit;
+    protected $codex;
 
     /**
      * @var \Illuminate\Contracts\Queue\Queue
@@ -51,15 +50,15 @@ class Factory implements FactoryContract
      * Factory constructor.
      *
      * @param \Illuminate\Contracts\Filesystem\Filesystem $files
-     * @param \Docit\Core\Contracts\Factory               $docit
+     * @param \Codex\Core\Contracts\Factory               $codex
      * @param \Illuminate\Contracts\Queue\Queue           $queue
      * @param \Illuminate\Contracts\Cache\Repository      $cache
      * @param \Sebwite\Git\Contracts\Manager              $git
      */
-    public function __construct(Filesystem $files, Docit $docit, Queue $queue, Manager $git)
+    public function __construct(Filesystem $files, Codex $codex, Queue $queue, Manager $git)
     {
         $this->files = $files;
-        $this->docit = $docit;
+        $this->codex = $codex;
         $this->queue = $queue;
         $this->git   = $git;
 
@@ -80,7 +79,7 @@ class Factory implements FactoryContract
         if ($project instanceof Project) {
             $project = $project->getName();
         }
-        $this->queue->push(SyncProjectCommand::class, compact('project'));
+        $this->queue->push(SyncProject::class, compact('project'));
     }
 
     /**
@@ -107,24 +106,24 @@ class Factory implements FactoryContract
     }
 
     /**
-     * get docit value
+     * get codex value
      *
-     * @return Docit
+     * @return Codex
      */
-    public function getDocit()
+    public function getCodex()
     {
-        return $this->docit;
+        return $this->codex;
     }
 
     /**
-     * Set the docit value
+     * Set the codex value
      *
-     * @param Docit $docit
+     * @param Codex $codex
      * @return Factory
      */
-    public function setDocit($docit)
+    public function setCodex($codex)
     {
-        $this->docit = $docit;
+        $this->codex = $codex;
 
         return $this;
     }
